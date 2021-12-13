@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <div class="main">
+      <section class="calculator">
+        <p>Bill</p>
+        <input type="text" id="bill" name="bill" placeholder="$" required />
+
+        <p>Select tip %</p>
+        <div class="myButtons">
+          <input type="button" value="5%" />
+          <input type="button" value="15%" />
+          <input type="button" value="25%" />
+          <input type="button" value="40%" />
+          <input type="button" value="50%" />
+          <input type="text" id="porcentaje" value=""/>
+        </div>
+
+        <p>Number of People</p>
+        <span id="errorname">    </span>
+        <input type="text" id="numberOfPeople" name="bill" placeholder="$" required />
+
+        <!-- <output id="r2"></output>  -->
+
+      </section>
+      <section class="results">
+        <div class="tipAmount">
+          <div class="tipAmountText">
+            <p>Tip Amount</p>
+            <span>/ person</span>
+          </div>
+          <div class="inputTipAmount">
+            <output id="r2" class="totalNumber"></output> 
+            <!-- <span class="totalTipNumber">$00.00</span> -->
+          </div>
+        </div>
+        <div class="tipAmount">
+          <div class="tipAmountText">
+            <p>Total</p>
+            <span>/ person</span>
+          </div>
+          <div class="inputTotalAmount">
+            <output id="r3" class="totalNumber"></output> 
+            <!-- <span class="totalNumber">$00.00</span> -->
+          </div>
+        </div>
+        <div class="buttonReset">
+        <input type="button" id="reset" value="RESET" onclick="borrarCampos()">
+        </div>
+      </section>
+    </main>
+
+    <script src="assets/js/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,202 @@
+:root {
+  --fontFamily: "Space Mono", monospace;
+  --inputFontSize: 1.5rem;
+  --bigAmount: 2.8rem;
+  --bodyBackground: hsl(189, 41%, 97%);
+  --cardColor: hsl(0, 0%, 100%);
+  --veryDarkCyan: hsl(183, 100%, 15%);
+  --darkGrayishCyan: hsl(186, 14%, 43%);
+  --darkGrayishCyan2: hsl(184, 14%, 56%);
+  --lightGrayishCyan: hsl(185, 41%, 84%);
+  --lightGrayishCyan2: hsl(189, 41%, 97%);
+  --whiteText: hsl(0, 0%, 100%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--bodyBackground);
+  font-family: var(--fontFamily);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 57.3rem;
+  height: 29.9rem;
+  padding: 2rem;
+  background-color: var(--cardColor);
+  border-radius: 20px;
+}
+.calculator,
+.results {
+  width: 25.8rem;
+  height: 26rem;
+}
+.calculator {
+  padding-right: 48px;
+}
+.calculator p {
+  color: var(--darkGrayishCyan);
+  font-weight: 700;
+}
+.results {
+  border-radius: 1rem;
+  background-color: var(--veryDarkCyan);
+  color: var(--whiteText);
+}
+
+.calculator input#bill {
+  width: 100%;
+  height: 2.813rem;
+  padding: 0.625rem;
+  border: 0;
+  border-radius: 5px;
+  background-color: var(--lightGrayishCyan2);
+  font-family: var(--fontFamily);
+  font-size: var(--inputFontSize);
+  font-weight: 700;
+  color: var(--veryDarkCyan);
+  text-align: right;
+}
+.calculator input#numberOfPeople {
+  width: 100%;
+  height: 2.813rem;
+  padding: 0.625rem;
+  border: 0;
+  border-radius: 5px;
+  background-color: var(--lightGrayishCyan2);
+  font-family: var(--fontFamily);
+  font-size: var(--inputFontSize);
+  font-weight: 700;
+  color: var(--veryDarkCyan);
+  text-align: right;
+}
+.calculator input:focus {
+  border: 1px solid var(--veryDarkCyan);
+  box-shadow: 0 0 3px var(--veryDarkCyan);
+  outline-offset: 0px;
+  outline: none;
+}
+.myButtons input {
+  background-color: var(--veryDarkCyan);
+  border: 0px;
+  width: 7.15rem;
+  height: 3.125rem;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.myButtons input:hover {
+  background-color: var(--lightGrayishCyan);
+}
+.myButtons input:focus {
+  background-color: var(--lightGrayishCyan);
+}
+.myButtons input:checked {
+  background-color: var(--lightGrayishCyan);
+}
+.myButtons input:target {
+  background-color: var(--lightGrayishCyan);
+}
+.myButtons input[value]:hover {
+  color: var(--veryDarkCyan);
+}
+.myButtons input[value]:focus,
+:checked,
+:target {
+  color: var(--veryDarkCyan);
+}
+.myButtons input[value] {
+  font-family: var(--fontFamily);
+  font-size: var(--inputFontSize);
+  font-weight: 700;
+  color: var(--whiteText);
+}
+
+.tipAmountText p {
+  padding: 4rem 0rem 0rem 3rem;
+  width: 10rem;
+  font-weight: 700;
+  margin: 0;
+}
+.tipAmountText span {
+  color: var(--darkGrayishCyan);
+  font-weight: 700;
+  padding-left: 3rem;
+}
+
+.tipAmount {
+  display: flex;
+  align-items: baseline;
+}
+.inputTipAmount,
+.inputTotalAmount {
+  position: relative;
+  left: 3rem;
+  top: 1rem;
+}
+.totalNumber,
+.totalTipNumber {
+  font-weight: 700;
+  color: var(--lightGrayishCyan);
+  font-size: var(--bigAmount);
+}
+.buttonReset {
+  padding: 3rem;
+  margin-top: 3rem;
+}
+#reset {
+  background-color: var(--lightGrayishCyan);
+  color: var(--veryDarkCyan);
+  font-family: var(--fontFamily);
+  font-size: var(--inputFontSize);
+  font-weight: 700;
+  border: 0px;
+  width: 100%;
+  height: 3.125rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#errorname {
+  float: right;
+  color: rgb(223, 134, 33);
+}
+#porcentaje {
+  text-align: center;
+}
+@media screen and (max-width: 575px) {
+  .main {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .calculator,
+  .results {
+    width: 100%;
+    height: auto;
+    padding: 0;
+  }
+  .results {
+    margin-top: 5rem;
+  }
+  .myButtons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(60px, auto);
+  }
+  .myButtons input {
+    width: 100%;
+  }
+}
